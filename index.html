@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Mahasiswa | Personal Profile</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkbase: {
+                            DEFAULT: '#0F1115',
+                            card: '#161920',
+                            border: 'rgba(255, 255, 255, 0.08)'
+                        },
+                        accent: {
+                            DEFAULT: '#6366F1',
+                            light: '#818CF8',
+                            subtle: 'rgba(99, 102, 241, 0.1)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0F1115;
+            color: #9CA3AF;
+        }
+        .project-card {
+            background: #161920;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.35s ease;
+        }
+        .project-card:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px -10px rgba(99, 102, 241, 0.15);
+        }
+        .image-zoom {
+            transition: transform 0.5s ease;
+        }
+        .project-card:hover .image-zoom {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-accent/30 selection:text-accent-light">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0F1115]/85 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-6 h-18 flex items-center justify-between">
+            <a href="#" class="font-bold text-white text-base tracking-wider flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-accent"></span>
+                <span>Jekii</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-gray-400">
+                <a href="#about" class="hover:text-white transition-colors">Tentang</a>
+                <a href="#projects" class="hover:text-white transition-colors">Proyek & Foto</a>
+                <a href="#skills" class="hover:text-white transition-colors">Keahlian</a>
+                <a href="#contact" class="hover:text-white transition-colors">Kontak</a>
+            </nav>
+
+            <a href="#contact" class="px-4 py-2 rounded-xl bg-accent hover:bg-accent-light text-white text-xs font-semibold tracking-wider uppercase transition-colors">
+                Hubungi Saya
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-18">
+
+        <!-- HERO SECTION DENGAN FOTO PROFIL -->
+        <section class="min-h-[85vh] flex items-center justify-center px-6 py-20">
+            <div class="max-w-4xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+                
+                <!-- Teks Intro -->
+                <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/20 text-accent-light text-xs font-medium">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Mahasiswa & Web Developer
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
+                        Halo, Saya <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Arzaki</span>
+                    </h1>
+
+                    <p class="text-gray-400 text-sm sm:text-base font-light leading-relaxed">
+                        Mahasiswa tingkat akhir yang berfokus pada pengembangan antarmuka web modern, UI/UX design, dan penciptaan solusi digital yang inovatif.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
+                        <a href="#projects" class="px-7 py-3.5 rounded-xl bg-accent hover:bg-accent-light text-white text-xs font-semibold uppercase tracking-wider transition-all">
+                            Lihat Proyek
+                        </a>
+                        <a href="#contact" class="px-7 py-3.5 rounded-xl bg-darkbase-card hover:bg-darkbase-border text-gray-300 text-xs font-semibold uppercase tracking-wider border border-white/10 transition-all">
+                            Kontak Saya
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Foto Profil Menarik -->
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-3xl overflow-hidden border-2 border-accent/30 shadow-2xl group">
+                        <!-- Ganti link gambar di bawah dengan foto profil Anda -->
+                        <img src="profil.jpeg" alt="Foto Profil" class="w-full h-full object-cover image-zoom">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkbase-card/80 via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-center">
+                            <span class="text-xs font-medium text-white tracking-wider bg-darkbase/80 px-3 py-1 rounded-full border border-white/10">💻 Code & Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="
+    background-color: #1a1a24; 
+    border: 1px solid #3b3b58; 
+    border-radius: 16px; 
+    padding: 12px 16px; 
+    width: 320px; 
+    margin-top: 20px;
+    font-family: sans-serif;
+">
+    <!-- Tulisan Putar Musik -->
+    <p style="color: #e2e8f0; font-size: 14px; font-weight: bold; margin: 0 0 8px 4px;">
+        🎵 Putar musik dulu guiss💃🕺
+    </p>
+
+    <!-- Pemutar Audio -->
+    <audio controls style="width: 100%; height: 40px; color-scheme: dark;">
+        <source src="1234.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT / PENDIDIKAN -->
+        <section id="about" class="py-20 px-6 border-t border-white/5 bg-[#12151C]">
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+                <div class="space-y-4">
+                    <span class="text-xs uppercase tracking-[0.2em] text-accent font-semibold">Tentang Saya</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">Eksplorasi Tanpa Batas di Dunia Teknologi</h2>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Saat ini saya sedang menempuh pendidikan S1 Ilmu Komputer. Selain kuliah, saya aktif mengikuti proyek open-source, mendesain antarmuka aplikasi, serta mengikuti berbagai kompetisi kreatif tingkat nasional.
+                    </p>
+                </div>
+                <div class="project-card p-6 rounded-2xl space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-accent-subtle flex items-center justify-center text-accent">
+                            <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-white text-sm font-semibold">S1 Teknit informatika</div>
+                            <div class="text-xs text-gray-500">Universitas Pgri semarang • 2022 - Sekarang (IPK 3.85)</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                            <i data-lucide="award" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-white text-sm font-semibold">Juara 1 Nasional Hackathon</div>
+                            <div class="text-xs text-gray-500">Kategori Inovasi Aplikasi Publik • 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS & GALERI FOTO KARYA -->
+        <section id="projects" class="py-20 px-6">
+            <div class="max-w-5xl mx-auto space-y-12">
+                <div class="text-center space-y-3">
+                    <span class="text-xs uppercase tracking-[0.2em] text-accent font-semibold">Portofolio</span>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-white">Proyek & Tangkapan Layar Karya</h2>
+                    <p class="text-gray-400 text-sm font-light max-w-xl mx-auto">Beberapa hasil karya aplikasi dan desain antarmuka yang telah saya kembangkan.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- Project 1 -->
+                    <div class="project-card rounded-3xl overflow-hidden flex flex-col justify-between">
+                        <div class="overflow-hidden h-52 bg-gray-800">
+                            <!-- Foto/Screenshot Proyek 1 -->
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="TaskAI App" class="w-full h-full object-cover image-zoom">
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] uppercase tracking-wider text-accent font-semibold">Web App • Skripsi</span>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="external-link" class="w-4 h-4"></i></a>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Sistem Manajemen Tugas Pintar (TaskAI)</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed font-light">
+                                Platform manajemen tugas berbasis web yang mengintegrasikan kecerdasan buatan untuk penjadwalan otomatis prioritas tugas mahasiswa.
+                            </p>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="px-2.5 py-1 rounded-md bg-darkbase-border text-[11px] text-gray-300">React.js</span>
+                                <span class="px-2.5 py-1 rounded-md bg-darkbase-border text-[11px] text-gray-300">Node.js</span>
+                                <span class="px-2.5 py-1 rounded-md bg-darkbase-border text-[11px] text-gray-300">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card rounded-3xl overflow-hidden flex flex-col justify-between">
+                        <div class="overflow-hidden h-52 bg-gray-800">
+                            <!-- Foto/Screenshot Proyek 2 -->
+                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="E-Campus Marketplace" class="w-full h-full object-cover image-zoom">
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] uppercase tracking-wider text-accent font-semibold">Mobile UI/UX • Kelompok</span>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="external-link" class="w-4 h-4"></i></a>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">E-Campus Marketplace</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed font-light">
+                                Desain antarmuka aplikasi seluler bagi mahasiswa untuk jual-beli buku bekas, perlengkapan kuliah, dan sewa alat praktikum internal kampus.
+                            </p>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="px-2.5 py-1 rounded-md bg-darkbase-border text-[11px] text-gray-300">Figma</span>
+                                <span class="px-2.5 py-1 rounded-md bg-darkbase-border text-[11px] text-gray-300">UI/UX Research</span>
+                                <span class="px-2.5 py-1 rounded-md bg-darkbase-border text-[11px] text-gray-300">Prototyping</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="py-20 px-6 border-t border-white/5 bg-[#12151C]">
+            <div class="max-w-4xl mx-auto space-y-10 text-center">
+                <div class="space-y-2">
+                    <span class="text-xs uppercase tracking-[0.2em] text-accent font-semibold">Keahlian</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">Teknologi & Tools yang Dikuasai</h2>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-4 py-2 rounded-xl bg-darkbase-card border border-white/10 text-xs text-gray-200">HTML5 & CSS3</span>
+                    <span class="px-4 py-2 rounded-xl bg-darkbase-card border border-white/10 text-xs text-gray-200">JavaScript (ES6+)</span>
+                    <span class="px-4 py-2 rounded-xl bg-darkbase-card border border-white/10 text-xs text-gray-200">React.js</span>
+                    <span class="px-4 py-2 rounded-xl bg-darkbase-card border border-white/10 text-xs text-gray-200">Tailwind CSS</span>
+                    <span class="px-4 py-2 rounded-xl bg-darkbase-card border border-white/10 text-xs text-gray-200">Python / Flask</span>
+                    <span class="px-4 py-2 rounded-xl bg-darkbase-card border border-white/10 text-xs text-gray-200">Git & GitHub</span>
+                    <span class="px-4 py-2 rounded-xl bg-darkbase-card border border-white/10 text-xs text-gray-200">Figma</span>
+                    <span class="px-4 py-2 rounded-xl bg-darkbase-card border border-white/10 text-xs text-gray-200">SQL / Databases</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="py-20 px-6">
+            <div class="max-w-2xl mx-auto project-card p-8 rounded-3xl space-y-6 text-center">
+                <div class="space-y-2">
+                    <span class="text-xs uppercase tracking-[0.2em] text-accent font-semibold">Kontak</span>
+                    <h2 class="text-2xl font-bold text-white">Mari Terhubung!</h2>
+                    <p class="text-xs text-gray-400">Tertarik bekerja sama atau ingin sekadar berdiskusi? Kirimkan pesan melalui email.</p>
+                </div>
+
+                <a href="mailto:emailmu@domain.com" class="inline-block px-6 py-3 rounded-xl bg-accent hover:bg-accent-light text-white text-xs font-semibold uppercase tracking-wider transition-all">
+                    arzakizakii22@gmail.com
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 py-8 text-center text-xs text-gray-500">
+        <p>© 2026 arzaki. Built with Passion & Tailwind CSS.</p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
